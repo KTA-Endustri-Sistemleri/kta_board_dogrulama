@@ -14,6 +14,11 @@ Bu Frappe uygulaması 3 DocType içerir:
 | `Test Masasi Dogrulama Kaydi` | Ana form | Tüm doğrulama kaydı |
 | `Degerlendirme Kriteri` | Child Table | 12 sabit değerlendirme sorusu |
 | `Baglanti Noktasi Satiri` | Child Table | 5 satırlı bağlantı noktası tablosu |
+| `Otomatik Kontak Basma Takip Kaydi` | Ana form | Otomatik kontak basma makinesi günlük üretim kaydı |
+
+Üretim takibi **KTA Uretim Takip** modülündedir. Excel'deki her dolu satır ERP'de
+tek kayıt olarak girilir; ay bazlı ayrı sayfalar yerine tarih filtresi ve liste
+dışa aktarma kullanılır.
 
 ---
 
@@ -73,6 +78,29 @@ Kurulum tamamlandıktan sonra:
    - **Değerlendirme Kriterleri** tablosu 12 sabit soruyla otomatik dolar → Evet / Hayır seçin
    - Fotoğraf eklemek için "Fotoğraflar" bölümünden dosya yükleyin
 5. **Save** ile kaydedin
+
+### Otomatik Kontak Basma Makinesi Takibi
+
+1. **KTA Uretim Takip** modülünü açın.
+2. **Otomatik Kontak Basma Takip Kaydi** → **New** seçin.
+3. Günlük üretim satırını girin. Tarih varsayılan olarak bugüne ayarlanır.
+4. Ürün no, kalıp no, press no, kontak no, adet ve basılan baskı sayısını doldurup kaydedin.
+5. Kayıtları tarih, ürün no ve press no ile filtreleyin; listeyi Excel/CSV olarak dışa aktarın.
+
+#### Excel ile aynı alanlar
+
+| Alan | ERP alan adı | Tip | Zorunlu |
+|---|---|---|---|
+| Tarih | `tarih` | Date | ✓ |
+| Ürün no | `urun_no` | Data | ✓ |
+| Kalıp no | `kalip_no` | Data | ✓ |
+| Press No | `press_no` | Data | ✓ |
+| Kontak no | `kontak_no` | Data | ✓ |
+| Adet | `adet` | Int | ✓ |
+| Basılan baskı sayısı | `basilan_baski_sayisi` | Int | ✓ |
+
+Kayıt numarası ERP tarafından `KTA-OKB-YYYY-#####` biçiminde atanır. Adet ve
+baskı sayısı negatif olamaz; sıfır adet mevcut kayıtlarla uyumlu olarak kabul edilir.
 
 ---
 
