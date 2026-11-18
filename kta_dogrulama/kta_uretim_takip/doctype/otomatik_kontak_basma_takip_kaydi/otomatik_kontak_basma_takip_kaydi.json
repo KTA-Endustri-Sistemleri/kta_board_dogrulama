@@ -1,0 +1,144 @@
+{
+ "actions": [],
+ "autoname": "naming_series:",
+ "creation": "2026-11-18 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "section_uretim",
+  "tarih",
+  "urun_no",
+  "col_uretim",
+  "kalip_no",
+  "press_no",
+  "kontak_no",
+  "section_baski",
+  "adet",
+  "col_baski",
+  "basilan_baski_sayisi"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Kayıt No Serisi",
+   "options": "KTA-OKB-.YYYY.-.#####",
+   "default": "KTA-OKB-.YYYY.-.#####",
+   "hidden": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_uretim",
+   "fieldtype": "Section Break",
+   "label": "Üretim Bilgileri"
+  },
+  {
+   "fieldname": "tarih",
+   "fieldtype": "Date",
+   "label": "Tarih",
+   "default": "Today",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "urun_no",
+   "fieldtype": "Data",
+   "label": "Ürün no",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "col_uretim",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "kalip_no",
+   "fieldtype": "Data",
+   "label": "Kalıp no",
+   "in_standard_filter": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "press_no",
+   "fieldtype": "Data",
+   "label": "Press No",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "kontak_no",
+   "fieldtype": "Data",
+   "label": "Kontak no",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_baski",
+   "fieldtype": "Section Break",
+   "label": "Baskı Bilgileri"
+  },
+  {
+   "fieldname": "adet",
+   "fieldtype": "Int",
+   "label": "Adet",
+   "in_list_view": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "col_baski",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "basilan_baski_sayisi",
+   "fieldtype": "Int",
+   "label": "Basılan baskı sayısı",
+   "in_list_view": 1,
+   "reqd": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-11-18 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "KTA Uretim Takip",
+ "name": "Otomatik Kontak Basma Takip Kaydi",
+ "naming_rule": "By 'Naming Series' field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 0,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 0,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "All",
+   "share": 1,
+   "submit": 0,
+   "write": 1
+  }
+ ],
+ "search_fields": "urun_no,kalip_no,press_no,kontak_no",
+ "sort_field": "tarih",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "urun_no",
+ "track_changes": 1
+}

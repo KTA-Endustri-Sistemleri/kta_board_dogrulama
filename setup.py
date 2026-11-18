@@ -6,7 +6,7 @@ with open("requirements.txt") as f:
 setup(
     name="kta_dogrulama",
     version="1.0.0",
-    description="Test ve Form Masası Aparat Doğrulama Kayıt Formu (PTR 07/222-02)",
+    description="KTA doğrulama ve üretim takip formları",
     author="KTA Endüstri",
     author_email="info@kta.com.tr",
     packages=find_packages(),
